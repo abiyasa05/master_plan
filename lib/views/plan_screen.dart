@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 class PlanScreen extends StatefulWidget {
   final Plan plan;
 
-  const PlanScreen({Key? key, required this.plan}) : super(key: key);
+  const PlanScreen({super.key, required this.plan});
+
+  // const PlanScreen({Key? key, required this.plan}) : super(key: key);
 
   @override
   State createState() => _PlanScreenState();
@@ -85,10 +87,6 @@ class _PlanScreenState extends State<PlanScreen> {
             name: currentPlan.name,
             tasks: updatedTasks,
           );
-        Plan(
-          name: currentPlan.name,
-          tasks: updatedTasks,
-        );
       },
     );
   }

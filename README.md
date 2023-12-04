@@ -302,3 +302,113 @@ Pada bagian ini kode tetap seperti berikut.
 Langkah 7: Widget build
 
 Pastikan Anda telah merubah ke List dan mengubah nilai pada currentPlan seperti kode berikut ini.
+
+<p align="center">
+  <img src="img/praktikum_3/7.png" alt="Alt text">
+</p>
+
+Langkah 8: Edit _buildTaskTile
+
+Pastikan ubah ke List dan variabel planNotifier seperti kode berikut ini.
+
+<p align="center">
+  <img src="img/praktikum_3/8.png" alt="Alt text">
+</p>
+
+Langkah 9: Buat screen baru
+
+Pada folder view, buatlah file baru dengan nama plan_creator_screen.dart dan deklarasikan dengan StatefulWidget bernama PlanCreatorScreen. Gantilah di main.dart pada atribut home menjadi seperti berikut.
+
+<p align="center">
+  <img src="img/praktikum_3/9.png" alt="Alt text">
+</p>
+
+<p align="center">
+  <img src="img/praktikum_3/main.png" alt="Alt text">
+</p>
+
+Langkah 10: Pindah ke class _PlanCreatorScreenState
+
+Kita perlu tambahkan variabel TextEditingController sehingga bisa membuat TextField sederhana untuk menambah Plan baru. Jangan lupa tambahkan dispose ketika widget unmounted seperti kode berikut.
+
+<p align="center">
+  <img src="img/praktikum_3/10.png" alt="Alt text">
+</p>
+
+Langkah 11: Pindah ke method build
+
+Letakkan method Widget build berikut di atas void dispose. Gantilah ‘Namaku' dengan nama panggilan Anda.
+
+<p align="center">
+  <img src="img/praktikum_3/11.png" alt="Alt text">
+</p>
+
+Langkah 12: Buat widget _buildListCreator
+
+Buatlah widget berikut setelah widget build.
+
+<p align="center">
+  <img src="img/praktikum_3/12.png" alt="Alt text">
+</p>
+
+Langkah 13: Buat void addPlan()
+
+Tambahkan method berikut untuk menerima inputan dari user berupa text plan.
+
+<p align="center">
+  <img src="img/praktikum_3/13.png" alt="Alt text">
+</p>
+
+Langkah 14: Buat widget _buildMasterPlans()
+
+Tambahkan widget seperti kode berikut.
+
+<p align="center">
+  <img src="img/praktikum_3/14.png" alt="Alt text">
+</p>
+
+Terakhir, run atau tekan F5 untuk melihat hasilnya jika memang belum running. Bisa juga lakukan hot restart jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini.
+
+<p align="center">
+  <img src="img/praktikum_3/run.png" alt="Alt text">
+</p>
+
+# Tugas Praktikum 3: State di Multiple Screens
+
+1. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+
+<p align="center">
+  <img src="img/praktikum_3/tugas1.png" alt="Alt text">
+</p>
+
+Jawab:
+
+Diagram tersebut menunjukkan struktur dasar dari aplikasi material Flutter. Struktur tersebut terdiri dari beberapa komponen utama, yaitu:
+
+-  MaterialApp: Komponen ini adalah komponen induk dari aplikasi material. Komponen ini      menyediakan pengaturan dasar untuk aplikasi, seperti tema, warna, dan font.
+
+-  PlanProvider: Komponen ini menyediakan data rencana.
+
+-  PlanScreen: Komponen ini menampilkan layar utama aplikasi. Layar ini menampilkan daftar rencana.
+
+-  PlanCreatorScreen: Komponen ini menampilkan layar pembuat rencana. Layar ini digunakan untuk membuat rencana baru.
+
+Diagram tersebut menunjukkan bagaimana komponen-komponen tersebut saling berinteraksi. Berikut adalah penjelasannya:
+
+-  MaterialApp: Komponen ini menyediakan pengaturan dasar untuk aplikasi. Komponen ini juga menyediakan rute untuk layar utama aplikasi.
+
+-  PlanProvider: Komponen ini menyediakan data rencana. Komponen ini diinisialisasi di layar utama aplikasi.
+
+-  PlanScreen: Komponen ini menampilkan daftar rencana. Komponen ini mengambil data rencana dari komponen PlanProvider.
+
+-  PlanCreatorScreen: Komponen ini menampilkan layar pembuat rencana. Komponen ini menggunakan rute yang disediakan oleh komponen MaterialApp.
+
+2. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+
+Jawab: 
+
+<p align="center">
+  <img src="img/praktikum_3/14.png" alt="Alt text">
+</p>
+
+Pertama, ia memeriksa apakah pengguna memiliki rencana yang sudah dibuat. Jika tidak ada rencana, tampilannya menunjukkan pesan bahwa belum ada rencana yang tersedia. Namun, jika ada rencana, aplikasi akan menampilkan daftar rencana dalam bentuk kotak-kotak kecil yang berisi informasi seperti nama rencana dan pesan singkat tentang kemajuan rencana tersebut. Ketika pengguna mengetuk salah satu rencana, mereka akan melihat detail dari rencana yang dipilih. Jadi, secara keseluruhan, kode ini bertanggung jawab untuk menampilkan daftar rencana kepada pengguna, memungkinkan mereka untuk melihat detail rencana yang sudah dibuat.
